@@ -1,1 +1,7 @@
+@import "./fonts.css";
 @import "tailwindcss";
+
+@theme {
+  --font-tasa: "TASA Explorer", sans-serif;
+  --font-ronzino: "Ronzino", serif;
+}
