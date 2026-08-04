@@ -78,9 +78,14 @@
           </div>
         </section>
 
-        <!-- Right: slots -->
-        <section class="p-6 sm:p-8 lg:p-10 flex flex-col gap-4" aria-labelledby="slots-heading">
+        <!-- Right: slots — always visible -->
+        <section
+          id="slots-panel"
+          class="p-6 sm:p-8 lg:p-10 flex flex-col gap-4"
+          aria-labelledby="slots-heading"
+        >
           <h2 id="slots-heading" class="font-ronzino text-xl sm:text-2xl font-bold text-[#1F2937]">Select a date</h2>
+          <p id="slots-prompt" class="font-ronzino text-base text-[#1F2937]/80">Select a date to see times</p>
           <p id="slots-empty" class="hidden font-ronzino text-base text-[#1F2937]/80">No times left today — please choose another date.</p>
           <ul id="slots-list" class="flex flex-col gap-3" role="listbox" aria-label="Available times"></ul>
         </section>

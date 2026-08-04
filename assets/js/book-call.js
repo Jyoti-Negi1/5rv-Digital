@@ -174,10 +174,14 @@
   function updateSummaries() {
     if (state.selectedDateKey) {
       els.summaryDate.textContent = formatLongDate(state.selectedDateKey);
-      els.slotsHeading.textContent = formatWeekdayDate(state.selectedDateKey);
+      if (els.slotsHeading) {
+        els.slotsHeading.textContent = formatWeekdayDate(state.selectedDateKey);
+      }
     } else {
       els.summaryDate.textContent = "Select a date";
-      els.slotsHeading.textContent = "Select a date";
+      if (els.slotsHeading) {
+        els.slotsHeading.textContent = "Select a date";
+      }
     }
     if (state.selectedSlot) {
       els.summaryTime.textContent = state.selectedSlot;
@@ -250,21 +254,26 @@
   }
 
   function renderSlots() {
+    if (!els.slotsList) return;
     els.slotsList.innerHTML = "";
+
     if (!state.selectedDateKey) {
-      els.slotsEmpty.classList.add("hidden");
+      if (els.slotsPrompt) els.slotsPrompt.classList.remove("hidden");
+      if (els.slotsEmpty) els.slotsEmpty.classList.add("hidden");
       return;
     }
+
+    if (els.slotsPrompt) els.slotsPrompt.classList.add("hidden");
 
     const available = SLOT_LABELS.filter((s) =>
       isSlotAvailable(state.selectedDateKey, s)
     );
 
     if (available.length === 0) {
-      els.slotsEmpty.classList.remove("hidden");
+      if (els.slotsEmpty) els.slotsEmpty.classList.remove("hidden");
       return;
     }
-    els.slotsEmpty.classList.add("hidden");
+    if (els.slotsEmpty) els.slotsEmpty.classList.add("hidden");
 
     available.forEach((label) => {
       const li = document.createElement("li");
@@ -449,7 +458,9 @@
     els.monthNext = $("month-next");
     els.slotsList = $("slots-list");
     els.slotsEmpty = $("slots-empty");
+    els.slotsPrompt = $("slots-prompt");
     els.slotsHeading = $("slots-heading");
+    els.slotsPanel = $("slots-panel");
     els.summaryDate = $("summary-date");
     els.summaryTime = $("summary-time");
     els.tzLabel = $("tz-label");
