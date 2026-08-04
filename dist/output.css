@@ -520,26 +520,17 @@
   .top-\[5329px\] {
     top: 5329px;
   }
-  .top-\[5352\.81px\] {
-    top: 5352.81px;
-  }
   .top-\[5353px\] {
     top: 5353px;
   }
   .top-\[5364\.04px\] {
     top: 5364.04px;
   }
-  .top-\[5364px\] {
-    top: 5364px;
-  }
   .top-\[5449\.14px\] {
     top: 5449.14px;
   }
   .top-\[5723px\] {
     top: 5723px;
-  }
-  .top-\[5787px\] {
-    top: 5787px;
   }
   .top-\[5831\.39px\] {
     top: 5831.39px;
@@ -549,9 +540,6 @@
   }
   .top-\[5831px\] {
     top: 5831px;
-  }
-  .top-\[5846px\] {
-    top: 5846px;
   }
   .top-\[5855\.21px\] {
     top: 5855.21px;
@@ -565,14 +553,8 @@
   .top-\[5951\.53px\] {
     top: 5951.53px;
   }
-  .top-\[5983px\] {
-    top: 5983px;
-  }
   .top-\[5991px\] {
     top: 5991px;
-  }
-  .top-\[6026px\] {
-    top: 6026px;
   }
   .top-\[6107\.09px\] {
     top: 6107.09px;
@@ -649,9 +631,6 @@
   .left-\[809px\] {
     left: 809px;
   }
-  .left-\[821px\] {
-    left: 821px;
-  }
   .left-\[832px\] {
     left: 832px;
   }
@@ -664,17 +643,11 @@
   .left-\[856\.50px\] {
     left: 856.50px;
   }
-  .left-\[857px\] {
-    left: 857px;
-  }
   .left-\[875px\] {
     left: 875px;
   }
   .left-\[876px\] {
     left: 876px;
-  }
-  .left-\[931px\] {
-    left: 931px;
   }
   .left-\[960px\] {
     left: 960px;
@@ -705,6 +678,12 @@
   }
   .z-50 {
     z-index: 50;
+  }
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
   }
   .m-0 {
     margin: 0px;
@@ -1015,6 +994,9 @@
   .max-w-\[1076px\] {
     max-width: 1076px;
   }
+  .max-w-\[1330px\] {
+    max-width: 1330px;
+  }
   .max-w-\[1400px\] {
     max-width: 1400px;
   }
@@ -1035,6 +1017,9 @@
   }
   .min-w-\[200px\] {
     min-width: 200px;
+  }
+  .min-w-\[280px\] {
+    min-width: 280px;
   }
   .flex-1 {
     flex: 1;
@@ -2021,8 +2006,14 @@
     .md\:h-\[233px\] {
       height: 233px;
     }
+    .md\:h-\[423px\] {
+      height: 423px;
+    }
     .md\:h-\[424px\] {
       height: 424px;
+    }
+    .md\:h-\[501px\] {
+      height: 501px;
     }
     .md\:h-\[514px\] {
       height: 514px;
@@ -2077,6 +2068,9 @@
     }
     .md\:gap-10 {
       gap: calc(var(--spacing) * 10);
+    }
+    .md\:gap-16 {
+      gap: calc(var(--spacing) * 16);
     }
     .md\:gap-24 {
       gap: calc(var(--spacing) * 24);
@@ -2266,6 +2260,12 @@
     .lg\:top-8 {
       top: calc(var(--spacing) * 8);
     }
+    .lg\:order-1 {
+      order: 1;
+    }
+    .lg\:order-2 {
+      order: 2;
+    }
     .lg\:mx-0 {
       margin-inline: 0px;
     }
@@ -2376,6 +2376,9 @@
     }
     .lg\:gap-\[53px\] {
       gap: 53px;
+    }
+    .lg\:gap-\[82px\] {
+      gap: 82px;
     }
     .lg\:gap-\[100px\] {
       gap: 100px;
