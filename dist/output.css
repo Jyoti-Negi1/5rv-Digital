@@ -106,7 +106,6 @@
     --leading-snug: 1.375;
     --leading-relaxed: 1.625;
     --radius-md: 0.375rem;
-    --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 0.15);
     --default-transition-duration: 150ms;
@@ -628,11 +627,17 @@
   .max-w-\[654px\] {
     max-width: 654px;
   }
+  .max-w-\[720px\] {
+    max-width: 720px;
+  }
   .max-w-\[759px\] {
     max-width: 759px;
   }
   .max-w-\[871px\] {
     max-width: 871px;
+  }
+  .max-w-\[900px\] {
+    max-width: 900px;
   }
   .max-w-\[908px\] {
     max-width: 908px;
@@ -676,6 +681,9 @@
   .min-w-\[280px\] {
     min-width: 280px;
   }
+  .min-w-\[560px\] {
+    min-width: 560px;
+  }
   .flex-1 {
     flex: 1;
   }
@@ -714,6 +722,9 @@
   }
   .\[scrollbar-width\:none\] {
     scrollbar-width: none;
+  }
+  .list-disc {
+    list-style-type: disc;
   }
   .list-none {
     list-style-type: none;
@@ -796,10 +807,20 @@
   .gap-\[42px\] {
     gap: 42px;
   }
+  :where(.space-y-2 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+  }
   :where(.space-y-2\.5 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-3 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
   }
   :where(.space-y-4 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
@@ -1049,6 +1070,9 @@
   .px-\[70px\] {
     padding-inline: 70px;
   }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -1097,6 +1121,9 @@
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
   }
@@ -1121,11 +1148,20 @@
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
   }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
+  }
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
   }
   .pb-16 {
     padding-bottom: calc(var(--spacing) * 16);
+  }
+  .pl-4 {
+    padding-left: calc(var(--spacing) * 4);
+  }
+  .pl-6 {
+    padding-left: calc(var(--spacing) * 6);
   }
   .text-center {
     text-align: center;
@@ -1456,6 +1492,9 @@
     .hover\:text-white:hover {
       color: var(--color-white);
     }
+    .hover\:underline:hover {
+      text-decoration-line: underline;
+    }
     .hover\:opacity-90:hover {
       opacity: 90%;
     }
@@ -1589,6 +1628,10 @@
       font-size: var(--text-7xl);
       line-height: var(--tw-leading, var(--text-7xl--line-height));
     }
+    .sm\:text-lg {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
     .sm\:text-xl {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
@@ -1710,6 +1753,9 @@
     .md\:gap-10 {
       gap: calc(var(--spacing) * 10);
     }
+    .md\:gap-12 {
+      gap: calc(var(--spacing) * 12);
+    }
     .md\:gap-16 {
       gap: calc(var(--spacing) * 16);
     }
@@ -1742,6 +1788,9 @@
     .md\:p-6 {
       padding: calc(var(--spacing) * 6);
     }
+    .md\:p-8 {
+      padding: calc(var(--spacing) * 8);
+    }
     .md\:px-10 {
       padding-inline: calc(var(--spacing) * 10);
     }
@@ -1766,8 +1815,14 @@
     .md\:pt-12 {
       padding-top: calc(var(--spacing) * 12);
     }
+    .md\:pt-16 {
+      padding-top: calc(var(--spacing) * 16);
+    }
     .md\:pt-24 {
       padding-top: calc(var(--spacing) * 24);
+    }
+    .md\:pb-14 {
+      padding-bottom: calc(var(--spacing) * 14);
     }
     .md\:pb-16 {
       padding-bottom: calc(var(--spacing) * 16);
@@ -1801,6 +1856,10 @@
     .md\:text-8xl {
       font-size: var(--text-8xl);
       line-height: var(--tw-leading, var(--text-8xl--line-height));
+    }
+    .md\:text-base {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
     .md\:text-lg {
       font-size: var(--text-lg);
