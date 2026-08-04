@@ -22,46 +22,8 @@
       <div class="absolute inset-0 bg-sky-950/40"></div>
     </div>
 
-    <div class="relative z-20 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 pt-4">
-      <div class="flex items-center justify-between gap-4 rounded-none bg-zinc-300/70 px-4 py-3 md:px-8 md:py-5 border-b-2 border-blue-500">
-        <a href="#intro" class="font-tasa text-lg font-bold text-gray-800 uppercase tracking-wide md:hidden">
-          5RV
-        </a>
-
-        <button
-          id="menu-btn"
-          type="button"
-          class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-white/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-
-        <nav class="hidden md:flex md:flex-1 md:items-center md:justify-center md:gap-8 lg:gap-12" aria-label="Primary">
-          <a href="#intro" class="font-tasa text-lg lg:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">About Us</a>
-          <a href="#featured-work" class="font-tasa text-lg lg:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Work</a>
-          <a href="#services" class="font-tasa text-lg lg:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Services</a>
-          <a href="#contact" class="font-tasa text-lg lg:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Contact</a>
-          <a href="#faq" class="font-tasa text-lg lg:text-2xl font-semibold text-gray-800 hover:text-blue-600 transition-colors">Blog</a>
-        </nav>
-      </div>
-
-      <nav
-        id="mobile-menu"
-        class="hidden md:hidden mt-2 rounded-xl bg-white/95 shadow-lg p-4 flex-col gap-3"
-        aria-label="Mobile"
-      >
-        <a href="#intro" class="mobile-nav-link font-tasa text-xl font-semibold text-gray-800 py-2">About Us</a>
-        <a href="#featured-work" class="mobile-nav-link font-tasa text-xl font-semibold text-gray-800 py-2">Work</a>
-        <a href="#services" class="mobile-nav-link font-tasa text-xl font-semibold text-gray-800 py-2">Services</a>
-        <a href="#contact" class="mobile-nav-link font-tasa text-xl font-semibold text-gray-800 py-2">Contact</a>
-        <a href="#faq" class="mobile-nav-link font-tasa text-xl font-semibold text-gray-800 py-2">Blog</a>
-      </nav>
-    </div>
+    <div id="site-header"></div>
+    <script src="./assets/js/load-header.js"></script>
 
     <div class="relative z-10 flex flex-1 items-center justify-center px-4 py-16 md:py-24">
       <h1 class="font-tasa text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold uppercase text-center text-white [text-shadow:_5px_7px_8px_rgb(0_0_0_/_0.85)]">
@@ -623,37 +585,11 @@
     </section>
   </main>
 
-  <footer class="bg-sky-950 border-t border-white/10 py-8">
-    <div class="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="font-tasa text-sm text-neutral-400">&copy; 5RV Digital</p>
-      <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer">
-        <a href="./about.html" class="font-ronzino text-sm text-neutral-300 hover:text-white transition-colors">About</a>
-        <a href="#featured-work" class="font-ronzino text-sm text-neutral-300 hover:text-white transition-colors">Work</a>
-        <a href="./contact.html" class="font-ronzino text-sm text-neutral-300 hover:text-white transition-colors">Contact</a>
-      </nav>
-    </div>
-  </footer>
+  <div id="site-footer"></div>
+  <script src="./assets/js/load-footer.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      /* Mobile nav */
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener("click", () => {
-          const open = mobileMenu.classList.toggle("hidden") === false;
-          mobileMenu.classList.toggle("flex", open);
-          menuBtn.setAttribute("aria-expanded", String(open));
-        });
-        mobileMenu.querySelectorAll(".mobile-nav-link").forEach((link) => {
-          link.addEventListener("click", () => {
-            mobileMenu.classList.add("hidden");
-            mobileMenu.classList.remove("flex");
-            menuBtn.setAttribute("aria-expanded", "false");
-          });
-        });
-      }
-
       /* Service tabs */
       const serviceTabs = document.querySelectorAll(".service-tab");
       const servicePanels = document.querySelectorAll(".service-panel");
