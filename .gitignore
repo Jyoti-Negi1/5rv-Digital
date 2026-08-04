@@ -1,0 +1,5 @@
+# Dependencies
+node_modules/
+
+# Local Web3Forms key override (copy from book-call-config.example.js)
+assets/js/book-call-config.js
