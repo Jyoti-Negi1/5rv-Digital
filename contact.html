@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | 5RV Digital</title>
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body class="bg-[#F6F4F0] text-[#1F2937] font-ronzino antialiased overflow-x-hidden">
+
+  <div id="site-header"></div>
+  <script src="./assets/js/load-header.js"></script>
+
+  <main class="pb-16 md:pb-24">
+    <!-- ========== HERO ========== -->
+    <section class="relative pt-12 md:pt-16 pb-10 md:pb-14 overflow-hidden" aria-labelledby="contact-hero-heading">
+      <div class="pointer-events-none absolute inset-0 opacity-40" aria-hidden="true">
+        <div class="absolute left-8 top-16 h-24 w-24 bg-[radial-gradient(circle,#356EFF_1px,transparent_1px)] bg-size-[12px_12px]"></div>
+        <div class="absolute right-0 top-10 h-40 w-1/2 bg-[radial-gradient(ellipse_at_center,rgba(53,110,255,0.08),transparent_70%)]"></div>
+      </div>
+      <div class="relative mx-auto w-full max-w-[900px] px-4 sm:px-6 text-center flex flex-col items-center gap-5">
+        <p class="font-ronzino text-sm sm:text-base font-medium tracking-[0.12em] uppercase text-[#356EFF]">Contact Us</p>
+        <h1 id="contact-hero-heading" class="font-ronzino text-3xl sm:text-5xl md:text-[52px] md:leading-[1.15] font-bold text-[#1F2937]">
+          Every Growth Strategy Starts With A <span class="text-[#356EFF]">Conversation</span>
+        </h1>
+        <p class="font-ronzino text-base sm:text-lg md:text-xl leading-relaxed text-[#1F2937]/80 max-w-[640px]">
+          Share your goals, tell us about your project and our team will get back with the right strategy to grow your business.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== MAIN CARD ========== -->
+    <section class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-10" aria-label="Contact form">
+      <div class="overflow-hidden rounded-[20px] bg-white shadow-[0_12px_40px_rgba(31,41,55,0.08)] border border-black/5">
+        <div class="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr]">
+          <!-- Form -->
+          <div class="p-6 sm:p-8 lg:p-10" id="contact-form-wrap">
+            <form id="contact-form" class="flex flex-col gap-10" novalidate>
+              <!-- Step 1 -->
+              <fieldset class="flex flex-col gap-6 border-0 p-0 m-0">
+                <legend class="float-left w-full mb-2">
+                  <span class="flex items-start gap-3">
+                    <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#356EFF] font-ronzino text-sm font-bold text-white">1</span>
+                    <span>
+                      <span class="block font-ronzino text-xl sm:text-2xl font-bold text-[#1F2937]">Your Details</span>
+                      <span class="block mt-1 font-ronzino text-sm sm:text-base text-[#1F2937]/70">Let's start with a few basics</span>
+                    </span>
+                  </span>
+                </legend>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 clear-both">
+                  <div>
+                    <label for="c-name" class="font-ronzino text-sm font-medium text-[#1F2937]">Name <span class="text-red-500">*</span></label>
+                    <div class="relative mt-1.5">
+                      <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#B3B3B3]" aria-hidden="true">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="8" r="4"/></svg>
+                      </span>
+                      <input id="c-name" name="name" type="text" required autocomplete="name" placeholder="Enter your name" class="w-full rounded-lg border border-[#D9D9D9] bg-white py-3 pl-10 pr-3 font-ronzino text-base text-[#1F2937] placeholder:text-[#B3B3B3] focus:outline-none focus:ring-2 focus:ring-[#356EFF]">
+                    </div>
+                    <p data-err="name" class="mt-1 hidden text-sm text-red-600">Please enter your name.</p>
+                  </div>
+
+                  <div>
+                    <label for="c-email" class="font-ronzino text-sm font-medium text-[#1F2937]">Email <span class="text-red-500">*</span></label>
+                    <div class="relative mt-1.5">
+                      <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#B3B3B3]" aria-hidden="true">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16v12H4z"/><path stroke-linecap="round" d="M4 7l8 6 8-6"/></svg>
+                      </span>
+                      <input id="c-email" name="email" type="email" required autocomplete="email" placeholder="Enter your email" class="w-full rounded-lg border border-[#D9D9D9] bg-white py-3 pl-10 pr-3 font-ronzino text-base text-[#1F2937] placeholder:text-[#B3B3B3] focus:outline-none focus:ring-2 focus:ring-[#356EFF]">
+                    </div>
+                    <p data-err="email" class="mt-1 hidden text-sm text-red-600">Please enter a valid email.</p>
+                  </div>
+
+                  <div>
+                    <label for="c-phone" class="font-ronzino text-sm font-medium text-[#1F2937]">Phone Number <span class="text-red-500">*</span></label>
+                    <div class="relative mt-1.5">
+                      <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#B3B3B3]" aria-hidden="true">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg>
+                      </span>
+                      <input id="c-phone" name="phone" type="tel" required autocomplete="tel" placeholder="Enter your phone number" class="w-full rounded-lg border border-[#D9D9D9] bg-white py-3 pl-10 pr-3 font-ronzino text-base text-[#1F2937] placeholder:text-[#B3B3B3] focus:outline-none focus:ring-2 focus:ring-[#356EFF]">
+                    </div>
+                    <p data-err="phone" class="mt-1 hidden text-sm text-red-600">Please enter your phone number.</p>
+                  </div>
+
+                  <div>
+                    <label for="c-company" class="font-ronzino text-sm font-medium text-[#1F2937]">Company Name</label>
+                    <div class="relative mt-1.5">
+                      <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#B3B3B3]" aria-hidden="true">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 20V8l8-4 8 4v12M9 20v-6h6v6"/></svg>
+                      </span>
+                      <input id="c-company" name="company" type="text" autocomplete="organization" placeholder="Enter company name" class="w-full rounded-lg border border-[#D9D9D9] bg-white py-3 pl-10 pr-3 font-ronzino text-base text-[#1F2937] placeholder:text-[#B3B3B3] focus:outline-none focus:ring-2 focus:ring-[#356EFF]">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="c-location" class="font-ronzino text-sm font-medium text-[#1F2937]">Location</label>
+                    <div class="relative mt-1.5">
+                      <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#B3B3B3]" aria-hidden="true">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                      </span>
+                      <input id="c-location" name="location" type="text" autocomplete="address-level2" placeholder="Enter your location" class="w-full rounded-lg border border-[#D9D9D9] bg-white py-3 pl-10 pr-3 font-ronzino text-base text-[#1F2937] placeholder:text-[#B3B3B3] focus:outline-none focus:ring-2 focus:ring-[#356EFF]">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="c-heard" class="font-ronzino text-sm font-medium text-[#1F2937]">How did you hear about us?</label>
+                    <div class="relative mt-1.5">
+                      <select id="c-heard" name="heard_about" class="w-full appearance-none rounded-lg border border-[#D9D9D9] bg-white py-3 pl-3 pr-10 font-ronzino text-base text-[#1F2937] focus:outline-none focus:ring-2 focus:ring-[#356EFF]">
+                        <option value="">Select an option</option>
+                        <option value="Google">Google</option>
+                        <option value="Referral">Referral</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Existing client">Existing client</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[#1F2937]" aria-hidden="true">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 9l6 6 6-6"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Step 2 -->
+              <fieldset class="flex flex-col gap-6 border-0 p-0 m-0">
+                <legend class="float-left w-full mb-2">
+                  <span class="flex items-start gap-3">
+                    <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#356EFF] font-ronzino text-sm font-bold text-white">2</span>
+                    <span>
+                      <span class="block font-ronzino text-xl sm:text-2xl font-bold text-[#1F2937]">About Your Project</span>
+                      <span class="block mt-1 font-ronzino text-sm sm:text-base text-[#1F2937]/70">Tell us more about what you need</span>
+                    </span>
+                  </span>
+                </legend>
+
+                <div class="clear-both flex flex-col gap-3">
+                  <p class="font-ronzino text-sm font-medium text-[#1F2937]">What is your project about?</p>
+                  <div id="service-chips" class="flex flex-wrap gap-2" role="group" aria-label="Project services">
+                    <button type="button" data-service="SEO" aria-pressed="false" class="service-chip inline-flex items-center gap-2 rounded-full border border-[#D9D9D9] bg-white px-4 py-2.5 font-ronzino text-sm text-[#1F2937] hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">
+                      <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+                      SEO
+                    </button>
+                    <button type="button" data-service="Website Design" aria-pressed="false" class="service-chip inline-flex items-center gap-2 rounded-full border border-[#D9D9D9] bg-white px-4 py-2.5 font-ronzino text-sm text-[#1F2937] hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">
+                      <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/></svg>
+                      Website Design
+                    </button>
+                    <button type="button" data-service="Social Media" aria-pressed="false" class="service-chip inline-flex items-center gap-2 rounded-full border border-[#D9D9D9] bg-white px-4 py-2.5 font-ronzino text-sm text-[#1F2937] hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">
+                      <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M21 12a8 8 0 1 1-3-6.3L21 7v5z"/><path d="M8 13h5M8 10h8"/></svg>
+                      Social Media
+                    </button>
+                    <button type="button" data-service="Photo Shoot" aria-pressed="false" class="service-chip inline-flex items-center gap-2 rounded-full border border-[#D9D9D9] bg-white px-4 py-2.5 font-ronzino text-sm text-[#1F2937] hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">
+                      <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h4l2-2h4l2 2h4v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+                      Photo Shoot
+                    </button>
+                    <button type="button" data-service="Branding" aria-pressed="false" class="service-chip inline-flex items-center gap-2 rounded-full border border-[#D9D9D9] bg-white px-4 py-2.5 font-ronzino text-sm text-[#1F2937] hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">
+                      <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" d="M20 12H8a4 4 0 1 1 0-8h12v16H8a4 4 0 0 1 0-8"/></svg>
+                      Branding
+                    </button>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                  <p class="font-ronzino text-sm font-medium text-[#1F2937]">Budget Estimation (GBP)</p>
+                  <div id="budget-chips" class="grid grid-cols-1 sm:grid-cols-2 gap-2" role="radiogroup" aria-label="Budget">
+                    <button type="button" data-budget="£0 - £1,000" aria-checked="false" role="radio" class="budget-chip rounded-xl border border-[#D9D9D9] bg-white px-4 py-3 font-ronzino text-sm text-[#1F2937] text-left hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">£0 - £1,000</button>
+                    <button type="button" data-budget="£1,000 - £5,000" aria-checked="false" role="radio" class="budget-chip rounded-xl border border-[#D9D9D9] bg-white px-4 py-3 font-ronzino text-sm text-[#1F2937] text-left hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">£1,000 - £5,000</button>
+                    <button type="button" data-budget="£5,000 - £10,000" aria-checked="false" role="radio" class="budget-chip rounded-xl border border-[#D9D9D9] bg-white px-4 py-3 font-ronzino text-sm text-[#1F2937] text-left hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">£5,000 - £10,000</button>
+                    <button type="button" data-budget="£10,000+" aria-checked="false" role="radio" class="budget-chip rounded-xl border border-[#D9D9D9] bg-white px-4 py-3 font-ronzino text-sm text-[#1F2937] text-left hover:border-[#356EFF] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#356EFF]">£10,000+</button>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="c-details" class="font-ronzino text-sm font-medium text-[#1F2937]">Project Details</label>
+                  <textarea
+                    id="c-details"
+                    name="details"
+                    rows="5"
+                    maxlength="1000"
+                    placeholder="Tell us more about your project, goals and expectations..."
+                    class="mt-1.5 w-full rounded-lg border border-[#D9D9D9] bg-white px-4 py-3 font-ronzino text-base text-[#1F2937] placeholder:text-[#B3B3B3] focus:outline-none focus:ring-2 focus:ring-[#356EFF]"
+                  ></textarea>
+                  <p class="mt-1 text-right font-ronzino text-xs text-[#1F2937]/60"><span id="char-count">0</span> / 1000</p>
+                </div>
+              </fieldset>
+
+              <p id="form-error" class="hidden font-ronzino text-sm text-red-600" role="alert"></p>
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#356EFF] px-6 py-4 font-ronzino text-base font-semibold text-white hover:bg-[#2a58d4] transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#356EFF] disabled:opacity-60"
+              >
+                Send Enquiry
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              </button>
+            </form>
+
+            <div id="contact-success" class="hidden flex-col items-start gap-4 py-8">
+              <h2 class="font-ronzino text-2xl sm:text-3xl font-bold text-[#1F2937]">Thank you</h2>
+              <p id="success-copy" class="font-ronzino text-lg text-[#1F2937]/80"></p>
+              <a href="./home.html" class="inline-flex items-center justify-center rounded-[5px] bg-[#D9D9D9] px-[30px] py-4 font-ronzino text-[22px] font-bold text-[#1F2937] hover:bg-[#c8c8c8] transition-colors">Back to home</a>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="bg-[#EEF2F8] p-6 sm:p-8 lg:p-10 flex flex-col gap-8">
+            <div>
+              <h2 class="font-ronzino text-2xl sm:text-3xl font-bold text-[#1F2937] leading-snug">
+                Let's build something great <span class="text-[#356EFF]">together.</span>
+              </h2>
+              <div class="mt-6 flex justify-center text-[#356EFF]" aria-hidden="true">
+                <svg class="h-20 w-20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 64 64">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 34c-4 0-8 3-8 8v4h16v-4c0-5-4-8-8-8zm28 0c-4 0-8 3-8 8v4h16v-4c0-5-4-8-8-8zM22 30c0-4 3-8 8-8h4c5 0 8 4 8 8"/>
+                  <path stroke-linecap="round" d="M26 38h12"/>
+                </svg>
+              </div>
+            </div>
+
+            <ul class="flex flex-col gap-4">
+              <li class="rounded-2xl bg-white p-4 shadow-sm">
+                <div class="flex items-start gap-3">
+                  <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#356EFF]/10 text-[#356EFF]" aria-hidden="true">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg>
+                  </span>
+                  <div>
+                    <p class="font-ronzino text-sm font-bold text-[#1F2937]">Chat with us</p>
+                    <a href="tel:02031503202" class="mt-1 block font-ronzino text-base text-[#356EFF] hover:underline">0203 150 3202</a>
+                    <p class="mt-1 font-ronzino text-sm text-[#1F2937]/70">Mon - Fri, 9am - 6pm</p>
+                  </div>
+                </div>
+              </li>
+              <li class="rounded-2xl bg-white p-4 shadow-sm">
+                <div class="flex items-start gap-3">
+                  <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#356EFF]/10 text-[#356EFF]" aria-hidden="true">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16v12H4z"/><path stroke-linecap="round" d="M4 7l8 6 8-6"/></svg>
+                  </span>
+                  <div>
+                    <p class="font-ronzino text-sm font-bold text-[#1F2937]">Email us</p>
+                    <a href="mailto:hello@5rv.digital" class="mt-1 block font-ronzino text-base text-[#356EFF] hover:underline">hello@5rv.digital</a>
+                    <p class="mt-1 font-ronzino text-sm text-[#1F2937]/70">We'll reply within 24 hrs</p>
+                  </div>
+                </div>
+              </li>
+              <li class="rounded-2xl bg-white p-4 shadow-sm">
+                <div class="flex items-start gap-3">
+                  <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#356EFF]/10 text-[#356EFF]" aria-hidden="true">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                  </span>
+                  <div>
+                    <p class="font-ronzino text-sm font-bold text-[#1F2937]">Visit our office</p>
+                    <a
+                      href="https://maps.google.com/?q=Beech+House+Greenfield+Crescent+Edgbaston+Birmingham+B15+3BE"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="mt-1 block font-ronzino text-sm leading-relaxed text-[#1F2937] hover:text-[#356EFF]"
+                    >
+                      Beech House<br>
+                      1a &amp; 1b, Greenfield Crescent<br>
+                      Edgbaston, Birmingham B15 3BE
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section class="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-10 mt-10 md:mt-14" aria-label="Why contact 5RV">
+      <div class="rounded-[20px] bg-white border border-black/5 px-6 py-8 md:px-10 md:py-10">
+        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <li class="flex flex-col gap-3">
+            <span class="text-[#356EFF]" aria-hidden="true">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 3l8 4v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V7l8-4z"/></svg>
+            </span>
+            <h3 class="font-ronzino text-lg font-bold text-[#1F2937]">Strategy First</h3>
+            <p class="font-ronzino text-sm leading-relaxed text-[#1F2937]/75">We understand your goals before we propose solutions.</p>
+          </li>
+          <li class="flex flex-col gap-3">
+            <span class="text-[#356EFF]" aria-hidden="true">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+            </span>
+            <h3 class="font-ronzino text-lg font-bold text-[#1F2937]">Tailored Solutions</h3>
+            <p class="font-ronzino text-sm leading-relaxed text-[#1F2937]/75">Custom strategies designed for your business.</p>
+          </li>
+          <li class="flex flex-col gap-3">
+            <span class="text-[#356EFF]" aria-hidden="true">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+            </span>
+            <h3 class="font-ronzino text-lg font-bold text-[#1F2937]">Measurable Growth</h3>
+            <p class="font-ronzino text-sm leading-relaxed text-[#1F2937]/75">Data-driven approach that delivers real results.</p>
+          </li>
+          <li class="flex flex-col gap-3">
+            <span class="text-[#356EFF]" aria-hidden="true">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg>
+            </span>
+            <h3 class="font-ronzino text-lg font-bold text-[#1F2937]">Quick Response</h3>
+            <p class="font-ronzino text-sm leading-relaxed text-[#1F2937]/75">We typically respond within 24 business hours.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="./assets/js/load-footer.js"></script>
+  <script src="./assets/js/contact-form-config.example.js"></script>
+  <script src="./assets/js/contact-form.js"></script>
+</body>
+</html>

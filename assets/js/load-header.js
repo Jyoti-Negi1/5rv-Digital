@@ -47,6 +47,7 @@
     if (file.includes("contact")) return "contact";
     if (file.includes("blog")) return "blog";
     if (file.includes("pricing")) return "prices";
+    if (file.includes("industries")) return "industries";
     return null;
   }
 
