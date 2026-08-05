@@ -34,7 +34,7 @@
     }
 
     const path = window.location.pathname.replace(/\\/g, "/");
-    if (path.includes("/our-work/") || path.includes("/services/")) {
+    if (path.includes("/our-work/") || path.toLowerCase().includes("/services/") || path.toLowerCase().includes("/legal/")) {
       return "../";
     }
     return "./";
@@ -46,6 +46,8 @@
     if (file.includes("about")) return "about";
     if (file.includes("contact")) return "contact";
     if (file.includes("blog")) return "blog";
+    if (file.includes("pricing")) return "prices";
+    if (file.includes("industries")) return "industries";
     return null;
   }
 

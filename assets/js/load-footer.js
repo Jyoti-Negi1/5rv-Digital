@@ -34,7 +34,7 @@
     }
 
     const path = window.location.pathname.replace(/\\/g, "/");
-    if (path.includes("/our-work/") || path.includes("/services/")) {
+    if (path.includes("/our-work/") || path.toLowerCase().includes("/services/") || path.toLowerCase().includes("/legal/")) {
       return "../";
     }
     return "./";

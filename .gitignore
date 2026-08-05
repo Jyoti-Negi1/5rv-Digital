@@ -1,0 +1,6 @@
+# Dependencies
+node_modules/
+
+# Local Web3Forms key overrides (placeholders live in *.example.js)
+assets/js/book-call-config.js
+assets/js/contact-form-config.js
